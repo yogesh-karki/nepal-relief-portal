@@ -61,39 +61,15 @@ map.on("load", function () {
     map.addLayer(
         {
         'id': 'urban-areas-fill',
-        'type': 'fill',
+        'type': 'line',
         'source': 'urban-areas',
         'layout': {},
         'paint': {
-            'fill-color': '#51bbd6',
-            'fill-opacity': 0.4
+          
+            "line-color": "#333"
             }
         })
 
-
-
-
-
-
-    // map.addSource('NewMap', {
-    //     type: 'vector',
-    //     url: 'mapbox://rajivshrestha.91onr8fp'
-    // });
-
-    // map.addLayer({
-    //     'id': 'terrain-data',
-    //     'type': 'line',
-    //     'source': 'NewMap',
-    //     'source-layer': 'provincegeo',
-    //     'layout': {
-    //         'line-join': 'round',
-    //         'line-cap': 'round'
-    //     },
-    //     'paint': {
-    //         'line-color': '#033',
-    //         'line-width': 1,
-    //     }
-    // });
 
     map.addLayer({
         id: "clusters",
