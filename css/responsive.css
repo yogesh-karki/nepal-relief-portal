@@ -10,6 +10,15 @@
         height: 40px;
     }
 
+    .map-wrapper .filter {
+        width: 320px;
+        padding-left: 20px;
+    }
+
+    .container {
+        max-width: 1290px;
+    }
+
 }
 
 @media screen and (max-width: 1024px) {
