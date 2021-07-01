@@ -1,0 +1,294 @@
+$base-color: #11b4da;
+
+header {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
+
+    .header-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+    }
+    .header-logo {
+        a {
+            font-size: 28px;
+            font-weight: 500;
+            color: $base-color;
+    
+            span {
+                margin: 0;
+                font-weight: 100;
+                color: #000;
+            }
+        }
+    }
+
+    .head-nav {
+        margin-left: -80px;
+
+        a {
+            text-transform: uppercase;
+            margin: 0 50px 0 0; 
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        a.active {
+            color: $base-color;
+        }
+    }
+
+    .request {
+        background: $base-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+        width: 120px;
+        height: 40px;
+        border-radius: 4px;
+
+        a {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            font-family: 'Proxima Nova';
+            font-weight: lighter;
+
+            ion-icon {
+                margin-right: 5px;
+            }
+            
+        }
+        
+    }
+    
+    
+}
+
+
+.map-wrapper {
+    position: relative;
+
+    #map { 
+        position: relative; 
+        top: 0; 
+        bottom: 0; 
+        width: 100%;  
+        height: calc(100vh - 100px)
+    }
+
+
+    .filter {
+        width: 350px;
+        background: #fff;
+        min-height: 400px;
+        top: 20%;
+        padding-left: 40px;
+        position: absolute;
+        z-index: 99;
+        background-color: #ffffff;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
+   
+        cursor: pointer;
+        transition: transform 450ms;
+
+        .nice-select.open .list {
+            width: 100%;
+            max-height: 220px;
+            overflow-y: auto;
+        }
+
+        .filter-head {
+            margin: 35px 0;
+
+
+
+            h4 {
+                font-size: 19px;
+                color: #000;
+                margin: 15px 0;
+                display: flex;
+                align-items: center;
+
+                ion-icon {
+                    margin-right: 5px;
+                }
+            } 
+            
+        }
+
+        .filter-card {
+            margin-bottom: 25px;
+
+            label {
+                font-size: 14px;
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .nice-select {
+                float: none;
+                width: 248px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                color: #0a0a0a;
+            }
+
+            a, button {
+                width: 125px;
+                background: #11b4da;
+                display: inline-flex;
+                border: 0;
+                color: #fff;
+                height: 40px;
+                margin: 0;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                cursor: pointer;
+
+                i {
+                    margin-right: 5px;
+                    font-size: 13px;
+                }
+            }
+
+            button {
+                background: transparent;
+                color: #11b4da;
+            }
+        }
+    }
+    
+    .mapboxgl-popup-content {
+  
+        border-radius: 10px;
+        box-shadow: none;
+        padding: 10px 10px 15px;
+        pointer-events: auto;
+        width: 608px;
+        min-width: 300px;
+        max-width: 60vw;
+        border-radius: 10px;
+        min-height: 300px;
+        background: #fff;
+        padding: 0;
+        box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
+    
+        button.mapboxgl-popup-close-button {
+            font-size: 30px;
+            width: auto;
+            margin: 10px;
+            font-family: 'Proxima Nova';
+            font-weight: 100;
+            color: #fff;
+        }
+    
+    }
+
+    .info-card-header {
+        background: #51bbd6;
+        color: #fff;
+        padding: 20px 10px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+
+        h4 {
+            font-family: 'Moderat';
+            margin: 0;
+            font-size: 26px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            width: 240px;
+            line-height: 1.4;
+            margin-bottom: 0;
+        }
+    }
+
+    .info-desc {
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+
+    }
+
+    .info-desc-wrapper {
+        flex-basis: calc(50% - 24px);
+        flex-shrink: 0;
+        flex-grow: 0;
+
+        .data {
+            display: flex;
+            align-items: center;
+            min-height: 30px;
+        }
+        
+        .title, .item-title {
+            font-weight: 700;
+            line-height: 1.25;
+            font-style: normal;
+            letter-spacing: 0px;
+            color: #242424;
+            width: 60%;
+            font-size: 13px;
+            font-family: 'Proxima Nova';
+            font-weight: lighter;
+        }
+        
+        .text, .item-text {
+            line-height: 1.25;
+            font-style: normal;
+            letter-spacing: 0px;
+            color: #000000;
+            font-family: 'Proxima Nova';
+            font-size: 13px;
+            font-weight: 300;
+        }
+        
+    }
+
+    .items {
+        border-top: 1px solid #c9c9c980;
+        margin: 0px 10px;
+        padding-bottom: 20px;
+
+        h5 {
+            font-size: 16px;
+            margin-bottom: 0px;
+            margin-left: 5px;
+            font-family: 'Moderat';
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        .item-wrapper {
+            padding: 10px 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .item {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            min-height: 30px;
+        }
+        
+    }
+}
+
+

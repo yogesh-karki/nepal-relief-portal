@@ -1,0 +1,43 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Moderat';
+  
+}
+  
+a {
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #1E130C;
+}
+
+button {
+  display: inline-flex;
+  border: 0;
+  background: transparent;
+}
+
+button:focus {
+  outline: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+   margin: 0;
+}
+
+p {
+  margin: 0;
+}

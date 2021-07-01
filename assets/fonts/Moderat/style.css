@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Moderat';
+    src: local('Moderat Condensed Thin'), local('Moderat-Condensed-Thin'),
+        url('Moderat-Condensed-Thin.woff2') format('woff2'),
+        url('Moderat-Condensed-Thin.woff') format('woff'),
+        url('Moderat-Condensed-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Moderat';
+    src: local('Moderat Condensed Medium'), local('Moderat-Condensed-Medium'),
+        url('Moderat-Condensed-Medium.woff2') format('woff2'),
+        url('Moderat-Condensed-Medium.woff') format('woff'),
+        url('Moderat-Condensed-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Moderat';
+    src: local('Moderat Condensed Regular '), local('Moderat-Condensed-Regular-'),
+        url('Moderat-Condensed-Regular.woff2') format('woff2'),
+        url('Moderat-Condensed-Regular.woff') format('woff'),
+        url('Moderat-Condensed-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }

@@ -1,0 +1,180 @@
+{
+    "type": "FeatureCollection",
+    
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "oxint1",
+                "project": "Oxygen for Nepal",
+                "type": "Institutions",
+                "subtype":"Community Hospital",
+                "name": "Janasewa Community Hospital",
+                "province": "Province 1",
+                "districts": "Khotang",
+                "address": "Diktel Rupakot Majhuwagadi Municipality",
+                "items": [
+                    {
+                        "Oxygen Cylinders 47 L": "3"
+                    }
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [86.7512222,27.2072924, 0.0]
+            }
+        },
+
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "oxint2",
+                "type": "Institutions",
+                "subtype":"NGO",
+                "name": "Collective Concern Society",
+                "province": "Bagmati",
+                "districts": "Sindhuli",
+                "address": "Fikkal Gaupalika",
+                "items": [
+                    {
+                        "Oxygen Cylinders 10 L": "15",
+                        "Oxygen Regulator 10 L": "5"
+                    }
+                ]
+                
+     
+           
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [85.6237152, 27.1853462, 0.0]
+            }
+        },
+
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "oxint3",
+                "type": "Institutions",
+                "subtype":"NGO",
+                "name": "Bighna Harta Nepal",
+                "province": "Karnali",
+                "districts": "Jumla",
+                "address": "Kankasundhari ",
+                "items": [
+                    {
+                        "Oxygen Cylinders 47 L": "4"
+                    }
+                ]
+     
+           
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [81.9384876, 29.2389773, 0.0]
+            }
+        },
+
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "oxint3",
+                "type": "Institutions",
+                "subtype":"Local Municipality",
+                "name": "Khadadevi Rural Municipality",
+                "province": "Bagmati",
+                "districts": "Ramechhap",
+                "address": "Khadadevi Rural Municipality",
+                "items": [
+                    {
+                        "Oxygen Cylinders 10 L": "10",
+                        "Oxygen Regulator 10 L": "3"
+                    }
+                ]
+     
+           
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [85.9048421, 27.5376064, 0.0]
+            }
+        },
+
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "oxint3",
+                "type": "Institutions",
+                "subtype":"Health Posts",
+                "name": "Makalu Health Post and Num Health Post ",
+                "province": "Province 1",
+                "districts": "Makalu",
+                "address": "Makalu",
+                "items": [
+                    {
+                        "Oxygen Cylinders 10 L": "10",
+                        "Oxygen Regulator 10 L": "3"
+                    }
+                ]
+     
+           
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [87.0788944, 27.8857644, 0.0]
+            }
+        },
+
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "oxint3",
+                "type": "Institutions",
+                "subtype":"Local Municipality",
+                "name": "Ajirkot",
+                "province": "Gandaki",
+                "districts": "Gorkha",
+                "address": "Gorkha",
+                "items": [
+                    {
+                        "Oxygen Cylinders 10 L": "3",
+                        "Oxygen Cylinders 47 L": "2"
+                    }
+                ]
+     
+           
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [84.5281173, 28.2741552, 0.0]
+            }
+        },
+
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "oxint3",
+                "type": "Individual",
+                "name": "Som Bahadur Tamang ",
+                "age": "45",
+                "province": "Bagmati",
+                "districts": "Kathmandu",
+                "address": "Gokarneshowr Municipality",
+                "items": [
+                    {
+                        "Oxygen Cylinders 27 L": "1"
+                    }
+                ]
+     
+           
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [85.3829884, 27.7640277, 0.0]
+            }
+        }
+
+
+    ]
+}
+

@@ -1,0 +1,40 @@
+
+
+@media screen and (max-width: 1424px) {
+
+	.filter {
+        top: 1% !important;
+        height: 100% !important;
+    }
+    .map-wrapper .filter .filter-card .nice-select {
+        height: 40px;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+}
+
+
+
+@media screen and (max-width: 480px) { 
+	
+}
+
+
+
+@media screen and (max-width: 375px) { 
+
+
+
+
+}
