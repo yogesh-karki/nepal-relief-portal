@@ -29,6 +29,7 @@
             "type": "Feature",
             "properties": {
                 "id": "oxint2",
+                "project": "Oxygen for Nepal",
                 "type": "Institutions",
                 "subtype":"NGO",
                 "name": "Collective Concern Society",
@@ -55,6 +56,7 @@
             "type": "Feature",
             "properties": {
                 "id": "oxint3",
+                "project": "Covid-19 Saftey Kit",
                 "type": "Institutions",
                 "subtype":"NGO",
                 "name": "Bighna Harta Nepal",
@@ -79,6 +81,7 @@
             "type": "Feature",
             "properties": {
                 "id": "oxint3",
+                "project": "Essentials (Food Ration)",
                 "type": "Institutions",
                 "subtype":"Local Municipality",
                 "name": "Khadadevi Rural Municipality",
@@ -104,6 +107,7 @@
             "type": "Feature",
             "properties": {
                 "id": "oxint3",
+                "project": "Oxygen for Nepal",
                 "type": "Institutions",
                 "subtype":"Health Posts",
                 "name": "Makalu Health Post and Num Health Post ",
@@ -129,6 +133,7 @@
             "type": "Feature",
             "properties": {
                 "id": "oxint3",
+                "project": "Covid-19 Saftey Kit",
                 "type": "Institutions",
                 "subtype":"Local Municipality",
                 "name": "Ajirkot",
@@ -154,6 +159,7 @@
             "type": "Feature",
             "properties": {
                 "id": "oxint3",
+                "project": "Essentials (Food Ration)",
                 "type": "Individual",
                 "name": "Som Bahadur Tamang ",
                 "age": "45",
