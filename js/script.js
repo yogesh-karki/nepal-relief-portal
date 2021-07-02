@@ -26,7 +26,24 @@ $(".update").on("click", (e) => {
     var selectedDistrict = $("#districts").val();
     var selectedInstitutionsType = $("#institutions_type").val();
 
-    console.log(selectedProvince,selectedProjects,selectedDistrict,selectedInstitutionsType);
+    
+
+    // const filterUpdate = () => {
+    //     console.log(selectedProjects,selectedProvince,selectedDistrict,selectedInstitutionsType);
+
+    //     const newGeoJSON = {...geojson };
+    //     if(selectedProjects) {
+    //         newGeoJSON.features =gejson.features.filter(feature => feature.properties.project === selectedProject)
+    //     }
+    //     else {
+    //         newGeoJSON.features = [...geojson.features];
+    //     }
+    //     map.getSource('places').setData(newGeoJSON);
+        
+    // }
+    
+    // filterUpdate();
+
 
     // Map Fly to the Province
     if (selectedProvince == 3) {
@@ -291,7 +308,7 @@ map.on("load", function () {
                         <div class="info-desc-wrapper">
                             <div class="data">
                                 <div class="title">Municipality</div>
-                                <div class="text">Kathmandu</div>
+                                <div class="text">${address}</div>
                         
                             </div>
                         </div>
