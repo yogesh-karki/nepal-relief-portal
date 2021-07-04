@@ -24,25 +24,10 @@ $(".update").on("click", (e) => {
     var selectedProjects = $("#projects").val();
     var selectedProvince = $("#provinces").val();
     var selectedDistrict = $("#districts").val();
-    var selectedInstitutionsType = $("#institutions_type").val();
 
     console.log(selectedProjects,selectedProvince,selectedDistrict,selectedInstitutionsType);
 
-    // const filterUpdate = () => {
-    //     console.log(selectedProjects,selectedProvince,selectedDistrict,selectedInstitutionsType);
 
-    //     const newGeoJSON = {...geojson };
-    //     if(selectedProjects) {
-    //         newGeoJSON.features =gejson.features.filter(feature => feature.properties.project === selectedProject)
-    //     }
-    //     else {
-    //         newGeoJSON.features = [...geojson.features];
-    //     }
-    //     map.getSource('places').setData(newGeoJSON);
-        
-    // }
-    
-    // filterUpdate();
 
 
     // Map Fly to the Province
@@ -273,14 +258,36 @@ map.on("load", function () {
                 elective1 = institution ? getInstitution.contact_person: getIndividual.gender,
                 elective2 = institution ? getInstitution.contact_phone: getIndividual.age;
 
-            
+                var inventories = JSON.parse(e.features[0].properties.inventories);
 
+               var items = "";
 
+                inventories.forEach(inventory => {
+                    var inventoryTitle = inventory.title;
+                    var inventoryQunatity = inventory.pivot.quantity;                 
+                    
+                    // console.log(inventoryTitle, inventoryQunatity)
+
+                    items = items + `
+                        <div class="info-desc-wrapper">
+                            <div class="data">
+                                <div class="title">${inventoryTitle}</div>
+                                <div class="text">${inventoryQunatity}</div>
+                            
+                            </div>
+                        </div>
+                        
+                        `
+
+                    
+                }); 
         
 
 
 
-                new mapboxgl.Popup()
+
+
+            new mapboxgl.Popup()
             .setLngLat(coordinates)
                 .setHTML(
                     `
@@ -337,27 +344,8 @@ map.on("load", function () {
                         <div class="items">
                             <h5>Responded with</h5>
                             <div class="item-wrapper">
-                                <div class="info-desc-wrapper">
-                                    <div class="data">
-                                        <div class="title">Oxygen Cylinders 10 L</div>
-                                        <div class="text">15</div>
+                                ${items}
                                 
-                                    </div>
-                                </div>
-                                <div class="info-desc-wrapper">
-                                    <div class="data">
-                                        <div class="title">Oxygen Regulator 10 L</div>
-                                        <div class="text">3</div>
-                                
-                                    </div>
-                                </div>
-                                <div class="info-desc-wrapper">
-                                    <div class="data">
-                                        <div class="title">Oxygen Concentrator</div>
-                                        <div class="text">1</div>
-                                
-                                    </div>
-                                </div>
                             </div>
                         </div>
                 
@@ -365,6 +353,8 @@ map.on("load", function () {
                     `
                 )
             .addTo(map);
+
+
      
 
             
