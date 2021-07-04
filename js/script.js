@@ -169,15 +169,7 @@ var map = new mapboxgl.Map({
 
 const loadData = (data) => {
     // Map
-    mapboxgl.accessToken = "pk.eyJ1IjoieW9nZXNoa2Fya2kiLCJhIjoiY2txZXphNHNlMGNybDJ1cXVmeXFiZzB1eSJ9.A7dJUR4ppKJDKWZypF_0lA";
-
-    var map = new mapboxgl.Map({
-        container: "map",
-        style: "mapbox://styles/yogeshkarki/ckqhmewto4m2317p8n8qarotc",
-        center: [83.0074, 28.4764],
-        zoom: 6,
-    });
-    map.on("load", function () {
+  
         // loading the respond data
         map.addSource("cylinders", {
             type: "geojson",
@@ -442,6 +434,5 @@ const loadData = (data) => {
                     )
                 .addTo(map);
         });
-    });
 }
 
