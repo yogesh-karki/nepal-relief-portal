@@ -258,7 +258,7 @@ map.on("load", function () {
         var institution = e.features[0].properties.institution_id;
         var individual = e.features[0].properties.individual_id;
 
-        console.log(institution)
+        console.log(JSON.parse(e.features[0].properties.institution).name);
         
         
 
