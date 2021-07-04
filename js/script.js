@@ -26,7 +26,7 @@ $(".update").on("click", (e) => {
     var selectedDistrict = $("#districts").val();
     var selectedInstitutionsType = $("#institutions_type").val();
 
-    
+    console.log(selectedProjects,selectedProvince,selectedDistrict,selectedInstitutionsType);
 
     // const filterUpdate = () => {
     //     console.log(selectedProjects,selectedProvince,selectedDistrict,selectedInstitutionsType);
@@ -108,7 +108,7 @@ map.on("load", function () {
     map.addSource("cylinders", {
         type: "geojson",
 
-        data: "./cylinder.geojson",
+        data: "./cylinder.json",
         cluster: true,
         clusterMaxZoom: 14,
         clusterRadius: 70,
@@ -254,95 +254,114 @@ map.on("load", function () {
         var coordinates = e.features[0].geometry.coordinates.slice();
 
         var type = e.features[0].properties.type;
-        var name = e.features[0].properties.name;
-        var subType = e.features[0].properties.subtype;
-        var address = e.features[0].properties.address;
-        var province = e.features[0].properties.province;
-        var district = e.features[0].properties.districts;
+
+        var institution = e.features[0].properties.institution_id;
+        var individual = e.features[0].properties.individual_id;
+
+        console.log(institution)
+        
+        
+
+        var institutionName = institution ? e.features[0].properties.institution.name : null
+
+        
+        console.log(institutionName)
+
+        // if(individual) {
+        //     console.log("hello ind");
+        // }else {
+        //     var name = e.features[0].properties.institution
+
+        //     console.log(name);
+
+        // }
+
+
+        // console.log(instutution,individual);
 
         new mapboxgl.Popup()
             .setLngLat(coordinates)
-            .setHTML(
-                `
-                <div class="info-card">
-                    <div class="info-card-header">
-                        <h4>${name}</h4>
+            // .setHTML(
+            //     `
+            //     <div class="info-card">
+            //         <div class="info-card-header">
+            //             <h4>${name}</h4>
                        
                         
-                    </div>
+            //         </div>
             
-                    <div class="info-desc">
-                        <div class="info-desc-wrapper">
-                            <div class="data">
-                                <div class="title">Instituation Type</div>
-                                <div class="text">${subType}</div>
-                            </div>
-                        </div>
-                        <div class="info-desc-wrapper">
-                            <div class="data">
-                                <div class="title">Province</div>
-                                <div class="text">${province}</div>
+            //         <div class="info-desc">
+            //             <div class="info-desc-wrapper">
+            //                 <div class="data">
+            //                     <div class="title">Instituation Type</div>
+            //                     <div class="text">${subType}</div>
+            //                 </div>
+            //             </div>
+            //             <div class="info-desc-wrapper">
+            //                 <div class="data">
+            //                     <div class="title">Province</div>
+            //                     <div class="text">${province}</div>
                         
-                            </div>
-                        </div>
-                        <div class="info-desc-wrapper">
-                            <div class="data">
-                                <div class="title">Contact Person</div>
-                                <div class="text">Contact Person</div>
+            //                 </div>
+            //             </div>
+            //             <div class="info-desc-wrapper">
+            //                 <div class="data">
+            //                     <div class="title">Contact Person</div>
+            //                     <div class="text">Contact Person</div>
                         
-                            </div>
-                        </div>
-                        <div class="info-desc-wrapper">
-                            <div class="data">
-                                <div class="title">District</div>
-                                <div class="text">${district}</div>
-                            </div>
-                        </div>
+            //                 </div>
+            //             </div>
+            //             <div class="info-desc-wrapper">
+            //                 <div class="data">
+            //                     <div class="title">District</div>
+            //                     <div class="text">${district}</div>
+            //                 </div>
+            //             </div>
                         
-                        <div class="info-desc-wrapper">
-                            <div class="data">   
-                                <div class="title">Contact Number</div>
-                                <div class="text">9852025874</div>
-                            </div>
-                        </div>
-                        <div class="info-desc-wrapper">
-                            <div class="data">
-                                <div class="title">Municipality</div>
-                                <div class="text">${address}</div>
+            //             <div class="info-desc-wrapper">
+            //                 <div class="data">   
+            //                     <div class="title">Contact Number</div>
+            //                     <div class="text">9852025874</div>
+            //                 </div>
+            //             </div>
+            //             <div class="info-desc-wrapper">
+            //                 <div class="data">
+            //                     <div class="title">Municipality</div>
+            //                     <div class="text">${address}</div>
                         
-                            </div>
-                        </div>
-                    </div>
-                    <div class="items">
-                        <h5>Responded with</h5>
-                        <div class="item-wrapper">
-                            <div class="info-desc-wrapper">
-                                <div class="data">
-                                    <div class="title">Oxygen Cylinders 10 L</div>
-                                    <div class="text">15</div>
+            //                 </div>
+            //             </div>
+            //         </div>
+            //         <div class="items">
+            //             <h5>Responded with</h5>
+            //             <div class="item-wrapper">
+            //                 <div class="info-desc-wrapper">
+            //                     <div class="data">
+            //                         <div class="title">Oxygen Cylinders 10 L</div>
+            //                         <div class="text">15</div>
                             
-                                </div>
-                            </div>
-                            <div class="info-desc-wrapper">
-                                <div class="data">
-                                    <div class="title">Oxygen Regulator 10 L</div>
-                                    <div class="text">3</div>
+            //                     </div>
+            //                 </div>
+            //                 <div class="info-desc-wrapper">
+            //                     <div class="data">
+            //                         <div class="title">Oxygen Regulator 10 L</div>
+            //                         <div class="text">3</div>
                             
-                                </div>
-                            </div>
-                            <div class="info-desc-wrapper">
-                                <div class="data">
-                                    <div class="title">Oxygen Concentrator</div>
-                                    <div class="text">1</div>
+            //                     </div>
+            //                 </div>
+            //                 <div class="info-desc-wrapper">
+            //                     <div class="data">
+            //                         <div class="title">Oxygen Concentrator</div>
+            //                         <div class="text">1</div>
                             
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            //                     </div>
+            //                 </div>
+            //             </div>
+            //         </div>
             
-                </div>
-                `
-            )
+            //     </div>
+            //     `
+            // )
             .addTo(map);
     });
 });
