@@ -275,7 +275,6 @@ map.on("load", function () {
 
             
 
-            console.log(name, provinceId,provinceName, districtId, districtName, type, elective1, elective2);
 
         
 
@@ -324,7 +323,7 @@ map.on("load", function () {
                             <div class="info-desc-wrapper">
                                 <div class="data">
                                     <div class="title">${institution ? "Contact Number" : "Age"}</div>
-                                    <div class="text">${elective2}</div>
+                                    <div class="text">${elective2 ? elective2 :""}</div>
                                 </div>
                             </div>
                             <div class="info-desc-wrapper">
