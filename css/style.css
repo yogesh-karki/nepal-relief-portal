@@ -254,6 +254,10 @@ header .request a ion-icon {
           justify-content: space-between;
 }
 
+.map-wrapper .info-desc .data .title {
+  width: 40%;
+}
+
 .map-wrapper .info-desc-wrapper {
   -ms-flex-preferred-size: calc(50% - 24px);
       flex-basis: calc(50% - 24px);

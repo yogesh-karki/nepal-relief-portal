@@ -258,110 +258,122 @@ map.on("load", function () {
         var institution = e.features[0].properties.institution_id;
         var individual = e.features[0].properties.individual_id;
 
-        console.log(JSON.parse(e.features[0].properties.institution).name);
+      
         
+            var getInstitution =  JSON.parse(e.features[0].properties.institution)
+            var getIndividual = JSON.parse(e.features[0].properties.individual)
+
+            var name = institution ? getInstitution.name : getIndividual.name,
+                provinceId = institution ? getInstitution.province.id: getIndividual.province.id,
+                provinceName = institution ? getInstitution.province.title: getIndividual.province.title,
+                districtId = institution ? getInstitution.district.id: getIndividual.district.id,
+                districtName = institution ? getInstitution.district.title: getIndividual.district.title,
+            
+                type = institution ? getInstitution.type: "Individual",
+                elective1 = institution ? getInstitution.contact_person: getIndividual.gender,
+                elective2 = institution ? getInstitution.contact_phone: getIndividual.age;
+
+            
+
+            console.log(name, provinceId,provinceName, districtId, districtName, type, elective1, elective2);
+
         
 
-        var institutionName = institution ? e.features[0].properties.institution.name : null
-
-        
-        console.log(institutionName)
-
-        // if(individual) {
-        //     console.log("hello ind");
-        // }else {
-        //     var name = e.features[0].properties.institution
-
-        //     console.log(name);
-
-        // }
 
 
-        // console.log(instutution,individual);
-
-        new mapboxgl.Popup()
+                new mapboxgl.Popup()
             .setLngLat(coordinates)
-            // .setHTML(
-            //     `
-            //     <div class="info-card">
-            //         <div class="info-card-header">
-            //             <h4>${name}</h4>
-                       
+                .setHTML(
+                    `
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <h4>${name}</h4>
                         
-            //         </div>
-            
-            //         <div class="info-desc">
-            //             <div class="info-desc-wrapper">
-            //                 <div class="data">
-            //                     <div class="title">Instituation Type</div>
-            //                     <div class="text">${subType}</div>
-            //                 </div>
-            //             </div>
-            //             <div class="info-desc-wrapper">
-            //                 <div class="data">
-            //                     <div class="title">Province</div>
-            //                     <div class="text">${province}</div>
-                        
-            //                 </div>
-            //             </div>
-            //             <div class="info-desc-wrapper">
-            //                 <div class="data">
-            //                     <div class="title">Contact Person</div>
-            //                     <div class="text">Contact Person</div>
-                        
-            //                 </div>
-            //             </div>
-            //             <div class="info-desc-wrapper">
-            //                 <div class="data">
-            //                     <div class="title">District</div>
-            //                     <div class="text">${district}</div>
-            //                 </div>
-            //             </div>
-                        
-            //             <div class="info-desc-wrapper">
-            //                 <div class="data">   
-            //                     <div class="title">Contact Number</div>
-            //                     <div class="text">9852025874</div>
-            //                 </div>
-            //             </div>
-            //             <div class="info-desc-wrapper">
-            //                 <div class="data">
-            //                     <div class="title">Municipality</div>
-            //                     <div class="text">${address}</div>
-                        
-            //                 </div>
-            //             </div>
-            //         </div>
-            //         <div class="items">
-            //             <h5>Responded with</h5>
-            //             <div class="item-wrapper">
-            //                 <div class="info-desc-wrapper">
-            //                     <div class="data">
-            //                         <div class="title">Oxygen Cylinders 10 L</div>
-            //                         <div class="text">15</div>
                             
-            //                     </div>
-            //                 </div>
-            //                 <div class="info-desc-wrapper">
-            //                     <div class="data">
-            //                         <div class="title">Oxygen Regulator 10 L</div>
-            //                         <div class="text">3</div>
+                        </div>
+                
+                        <div class="info-desc">
+                            <div class="info-desc-wrapper">
+                                <div class="data">
+                                    <div class="title">${institution ? "Instituation Type" : "Respone Type"}</div>
+                                    <div class="text">${type}</div>
                             
-            //                     </div>
-            //                 </div>
-            //                 <div class="info-desc-wrapper">
-            //                     <div class="data">
-            //                         <div class="title">Oxygen Concentrator</div>
-            //                         <div class="text">1</div>
+                                </div>
+                                
+                            </div>
+                            <div class="info-desc-wrapper">
+                                <div class="data">
+                                    <div class="title">Province</div>
+                                    <div class="text">${provinceName}</div>
                             
-            //                     </div>
-            //                 </div>
-            //             </div>
-            //         </div>
-            
-            //     </div>
-            //     `
-            // )
+                                </div>
+                            </div>
+                            <div class="info-desc-wrapper">
+                                <div class="data">
+                                    <div class="title">${institution ? "Contact Person" : "Gender"}</div>
+                                    <div class="text">${elective1}</div>
+                                </div>
+                            </div>
+                            <div class="info-desc-wrapper">
+                                <div class="data">
+                                    <div class="title">District</div>
+                                    <div class="text">${districtName}</div>
+                                </div>
+                            </div>
+                            
+                            <div class="info-desc-wrapper">
+                                <div class="data">
+                                    <div class="title">${institution ? "Contact Number" : "Age"}</div>
+                                    <div class="text">${elective2}</div>
+                                </div>
+                            </div>
+                            <div class="info-desc-wrapper">
+                                <div class="data">
+                                    <div class="title">Municipality</div>
+                                    <div class="text">Local address</div>
+                            
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <h5>Responded with</h5>
+                            <div class="item-wrapper">
+                                <div class="info-desc-wrapper">
+                                    <div class="data">
+                                        <div class="title">Oxygen Cylinders 10 L</div>
+                                        <div class="text">15</div>
+                                
+                                    </div>
+                                </div>
+                                <div class="info-desc-wrapper">
+                                    <div class="data">
+                                        <div class="title">Oxygen Regulator 10 L</div>
+                                        <div class="text">3</div>
+                                
+                                    </div>
+                                </div>
+                                <div class="info-desc-wrapper">
+                                    <div class="data">
+                                        <div class="title">Oxygen Concentrator</div>
+                                        <div class="text">1</div>
+                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                    </div>
+                    `
+                )
             .addTo(map);
+     
+
+            
+     
+
+
+        
+
+       
     });
 });
