@@ -337,4 +337,47 @@ header .request a ion-icon {
           align-items: center;
   min-height: 30px;
 }
+
+.numbers {
+  background: #eeefef;
+  padding: 50px 0;
+}
+
+.numbers .nums-head {
+  width: 40%;
+}
+
+.numbers .nums-head h4 ion-icon {
+  color: #11b4da;
+}
+
+.numbers .nums-head p {
+  margin-top: 10px;
+}
+
+.numbers .demographs {
+  padding: 30px 0;
+  padding-top: 60px;
+}
+
+.numbers .demographs .chart-sing {
+  margin: 10px 0;
+}
+
+.numbers .demographs g.highcharts-exporting-group {
+  display: none;
+}
+
+.numbers .demographs text.highcharts-credits {
+  display: none;
+}
+
+.numbers .demographs tspan {
+  font-size: 14px;
+  font-family: 'Moderat';
+}
+
+.numbers .demographs tspan.heading-main {
+  display: block;
+}
 /*# sourceMappingURL=style.css.map */

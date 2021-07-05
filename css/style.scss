@@ -298,3 +298,49 @@ header {
 }
 
 
+.numbers {
+    background: #eeefef;
+    padding: 50px 0;
+
+    .nums-head {
+        width: 40%;
+
+        h4 {
+            ion-icon {
+                color: $base-color;
+            }
+        }
+        
+        p {
+            margin-top: 10px;
+        }
+    }
+
+    .demographs {
+        padding: 30px 0;
+        padding-top: 60px;
+
+        .chart-sing {
+            margin: 10px 0;
+        }
+
+        g.highcharts-exporting-group {
+            display: none;
+        }
+        
+        text.highcharts-credits {
+            display: none;
+        }
+        
+        tspan {
+            font-size: 14px;
+            font-family: 'Moderat';
+        }
+
+        tspan.heading-main {
+            display: block;
+        }
+        
+        
+    }
+}

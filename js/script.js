@@ -24,6 +24,8 @@ $(".update").on("click", (e) => {
     var selectedProjects = $("#projects").val();
     var selectedProvince = $("#provinces").val();
     var selectedDistrict = $("#districts").val();
+
+
     var data = {
         "type": "FeatureCollection",
         
@@ -234,7 +236,8 @@ var map = new mapboxgl.Map({
     container: "map",
     style: "mapbox://styles/yogeshkarki/ckqhmewto4m2317p8n8qarotc",
     center: [83.0074, 28.4764],
-    zoom: 6,
+    minZoom: 6, // note the camel-case
+     maxZoom: 15
 });
 
 
