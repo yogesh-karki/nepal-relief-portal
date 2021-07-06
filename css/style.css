@@ -352,7 +352,7 @@ header .request a ion-icon {
 }
 
 .numbers .nums-head p {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .numbers .demographs {
@@ -379,5 +379,31 @@ header .request a ion-icon {
 
 .numbers .demographs tspan.heading-main {
   display: block;
+}
+
+.numbers .demographs g.highcharts-legend.highcharts-no-tooltip {
+  display: none;
+}
+
+.partners {
+  background: #eeefef;
+  padding: 80px 0;
+}
+
+.partners .item img {
+  width: 100%;
+  height: 170px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background: white;
+  padding: 10px;
+  -webkit-filter: saturate(0%);
+          filter: saturate(0%);
+  cursor: pointer;
+}
+
+.partners .item img:hover {
+  -webkit-filter: saturate(100%);
+          filter: saturate(100%);
 }
 /*# sourceMappingURL=style.css.map */

@@ -217,7 +217,7 @@ $(".update").on("click", (e) => {
             zoom: 7.5,
             essential: true,
         });
-    } else {
+    } else if (selectedProvince == 7) {
         map.flyTo({
             center: [80.8539, 29.3175],
             zoom: 8,

@@ -1,35 +1,38 @@
-Highcharts.chart('chart-gender', {
-    chart: {
-      type: 'variablepie'
-    },
-    colors: ['#4680ea', '#ef769d'],
-    title: {
-      text: `<h5>Relief Impacts </h5> <h2 class="heading-main">by Gender</h2>`
-    },
-    tooltip: {
-      headerFormat: '',
-      pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {point.name}</b><br/>' +
-        'Area (square km): <b>{point.y}</b><br/>' +
-        'Population density (people per square km): <b>{point.z}</b><br/>'
-    },
-    series: [{
-      minPointSize: 10,
-      innerSize: '20%',
-      zMin: 0,
-      name: 'countries',
-      data: [{
-        name: 'Male',
-        y: 505370,
-        z: 92.9,
+$(window).scroll(function () {
+  if ($(window).scrollTop() >= $(document).height() - $(window).height() - 10) {
+
+// Highcharts.chart('chart-gender', {
+//     chart: {
+//       type: 'variablepie'
+//     },
+//     colors: ['#4680ea', '#ef769d'],
+//     title: {
+//       text: `<h5>Relief Impacts </h5> <h2 class="heading-main">by Gender</h2>`
+//     },
+//     tooltip: {
+//       headerFormat: '',
+//       // pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {point.name}</b><br/>' +
+//       //   'Area (square km): <b>{point.y}</b><br/>' +
+//       //   'Population density (people per square km): <b>{point.z}</b><br/>'
+//     },
+//     series: [{
+//       minPointSize: 10,
+//       innerSize: '20%',
+//       zMin: 0,
+//       name: 'Gender',
+//       data: [{
+//         name: 'Male',
+//         y: 505370,
+//         z: 92.9,
       
-      }, {
-        name: 'Female',
-        y: 551500,
-        z: 118.7,
+//       }, {
+//         name: 'Female',
+//         y: 551500,
+//         z: 118.7,
       
-      }]
-    }]
-  });
+//       }]
+//     }]
+//   });
 
 
   Highcharts.chart('chart-type', {
@@ -42,15 +45,15 @@ Highcharts.chart('chart-gender', {
     },
     tooltip: {
       headerFormat: '',
-      pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {point.name}</b><br/>' +
-        'Area (square km): <b>{point.y}</b><br/>' +
-        'Population density (people per square km): <b>{point.z}</b><br/>'
+      // pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {point.name}</b><br/>' +
+      //   'Area (square km): <b>{point.y}</b><br/>' +
+      //   'Population density (people per square km): <b>{point.z}</b><br/>'
     },
     series: [{
       minPointSize: 10,
       innerSize: '20%',
       zMin: 0,
-      name: 'countries',
+      name: 'Beneficiary Type',
       data: [{
         name: 'Individual',
         y: 2000,
@@ -190,6 +193,38 @@ Highcharts.chart('chart-category', {
     },
     series: [{
         name: "",
-      data: [20, 15, 8, 10, 12, 28, 30]
+      data: [1.6, 2, 5, 2.8, 1, 0.5, 2]
     }]
   });
+
+  $('.partner-slider').owlCarousel({
+      loop: true,
+
+      autoplay: true,
+      animateOut: 'fadeOut',
+      animateIn: 'fadeIn',
+      margin: 15,
+      smartSpeed: 2500,
+      autoplayHoverPause:true,
+      slideBy: 3,
+      autoplayTimeout: 5000,
+      responsive: {
+          0: {
+              items: 2,
+          },
+          768: {
+              items: 3,
+          
+          },
+          1200: {
+              items: 6,
+          }
+      }
+  });
+
+
+
+
+
+  }
+});
