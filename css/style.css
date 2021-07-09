@@ -424,21 +424,34 @@ header .request a ion-icon {
   display: block;
 }
 
+.section-request .general-info {
+  padding-right: 80px;
+}
+
 .section-request .general-info h5 {
   font-size: 17px;
   text-transform: uppercase;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 
-.section-request .user-type {
+.section-request .user-type, .section-request .project-type {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.section-request .user-type p {
+.section-request .user-type p, .section-request .project-type p {
   margin-right: 40px;
   font-family: 'Proxima Nova';
+  font-size: 16px;
+}
+
+.section-request .filter-card .nice-select {
+  float: none;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid #859194;
+  border-radius: 0;
   font-size: 16px;
 }
 
@@ -462,5 +475,26 @@ header .request a ion-icon {
   outline: none;
   border: 0;
   border-bottom: 1px solid #43c4e2;
+}
+
+.project-select {
+  margin-top: 40px;
+}
+
+.upload-doc {
+  margin-top: 40px;
+}
+
+.upload-doc .dropzone {
+  min-height: 150px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: white;
+  padding: 20px 20px;
+}
+
+.location-info h5 {
+  font-size: 17px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
 }
 /*# sourceMappingURL=style.css.map */

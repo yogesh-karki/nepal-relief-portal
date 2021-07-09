@@ -373,6 +373,7 @@ header {
 .section-request {
     padding: 40px 0;
 
+   
     .form-head {
         text-align: center;
         margin-bottom: 50px;
@@ -387,14 +388,16 @@ header {
     }
 
     .general-info {
+        padding-right: 80px;
+
         h5 {
             font-size: 17px;
             text-transform: uppercase;
-            margin-bottom: 35px;
+            margin-bottom: 25px;
         }
     }
 
-    .user-type {
+    .user-type, .project-type {
         display: flex;
 
         p {
@@ -405,6 +408,17 @@ header {
 
     }
 
+
+    .filter-card {
+       .nice-select {
+            float: none;
+            padding: 0;
+            border: 0;
+            border-bottom: 1px solid #859194;
+            border-radius: 0;
+            font-size: 16px;
+        }
+    }
 
 
     .form-card {
@@ -427,5 +441,28 @@ header {
                 border-bottom: 1px solid #43c4e2;
             }
         }
+    }
+}
+
+.project-select {
+    margin-top: 40px;
+}
+
+.upload-doc {
+    margin-top: 40px;
+
+    .dropzone {
+        min-height: 150px;
+        border: 1px solid rgba(0,0,0,0.3);
+        background: white;
+        padding: 20px 20px;
+    }
+}
+
+.location-info {
+    h5 {
+        font-size: 17px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
     }
 }

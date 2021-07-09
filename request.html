@@ -15,14 +15,16 @@
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
 
     <link rel="stylesheet" href="./css/animate.css">
-   
-
-
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css"  />
 
     <link rel="stylesheet" href="assets/fonts/Moderat/style.css">
     <link rel="stylesheet" href="assets/fonts/Proxima Nova/stylesheet.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/dropzone.min.css">
 
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -56,12 +58,12 @@
 
     <section class="section-request">
         <div class="container">
-            <div class="form-head">
+            <!-- <div class="form-head">
                 <h4>REQUEST RELIEF</h4>
-            </div>
+            </div> -->
 
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-5">
                     <div class="general-info">
                         <h5>General Information</h5>
 
@@ -151,15 +153,89 @@
                                 
                             </div>
                         </div>
+
+                        <div class="project-select">
+                            <h5>Select Project</h5>
+
+                            <div class="project-type">
+                                <p>
+                                    <input type="checkbox" id="oxygen" name="project-type" checked>
+                                    <label for="oxygen">Oxygen</label>
+                                </p>
+
+                                <p>
+                                    <input type="checkbox" id="covid19-safety" name="project-type" >
+                                    <label for="covid19-safety">Covid 19 Safety Kit</label>
+                                </p>
+
+                                <p>
+                                    <input type="checkbox" id="essential" name="project-type" >
+                                    <label for="essential">Essentials</label>
+                                </p>
+                            </div>
+
+                            <div class="upload-doc" id="individualOxygen">
+                                <h5>Upload Document</h5>
+
+                                <form action="/file-upload" class="dropzone">
+                                    <div class="fallback">
+                                      <input name="file" type="file" multiple />
+                                    </div>
+                                  </form>
+                            </div>
+                        </div>
                         
                     </div>
+
                 </div>
     
                 <div class="col-md-4">
                     <div class="location-info">
-    
+                        <h5>Relief Request Location</h5>
+
+                        <div class="address-info-form" >
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="filter-card form-card">
+                                        <p>Province</p>
+                        
+                                        <select id="provinces">
+                                            <option value="-1" selected disabled>Select Province</option>
+                                        </select>
+                        
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="filter-card form-card">
+                                        <p>District</p>
+                        
+                                        <select id="districts">
+                                            <option value="-1" selected disabled>Select District</option>
+                                        </select>
+                        
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-card">
+                                        <p>Local Address</p>
+                                        <input type="text" value="Local Address">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <!-- <div id="location-select"></div> -->
+                                    <div id="map"></div> 
+                                </div>
+
+                               
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -233,10 +309,20 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" ></script>
+
+    <script src="./js/dropzone.min.js"></script>
+    <!-- <script type="module" src="./js/script.js"></script> -->
+    <script type="module" src="./js/locationSelect.js"></script>
+
 
     <script>
 
+            $("select").niceSelect();
 
             var check = $("#individual").prop("checked");
 			if(check){
@@ -254,8 +340,11 @@
 				check = $(this).prop("checked");
 				$("#individual-form").removeClass("activeTab");
 				$("#institution-form").addClass("activeTab");
-				console.log(check);
 			})
+
+
+   
+
 
 
     </script>
