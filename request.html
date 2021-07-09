@@ -35,7 +35,7 @@
         <div class="container">
             <div class="header-wrap">
                 <div class="header-logo">
-                    <a href="">
+                    <a href="index.html">
                         NEPAL RELIEF <span>PORTAL</span>
                     </a>
                 </div>
@@ -54,7 +54,115 @@
     </header>
 
 
+    <section class="section-request">
+        <div class="container">
+            <div class="form-head">
+                <h4>REQUEST RELIEF</h4>
+            </div>
 
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="general-info">
+                        <h5>General Information</h5>
+
+                        <div class="user-type">
+                            <p>
+                                <input type="radio" id="individual" name="user-type" checked>
+                                <label for="individual">Individual</label>
+                            </p>
+
+                            <p>
+                                <input type="radio" id="institution" name="user-type" >
+                                <label for="institution">Institution</label>
+                            </p>
+                        </div>
+
+                        <div class="info-form" id="individual-form">
+                            <div class="row">
+
+                                <div class="col-md-12">
+                                    <div class="form-card">
+                                        <p>Full Name</p>
+                                        <input type="text" value="Yogesh Karki">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-card">
+                                        <p>Contact Number</p>
+                                        <input type="number" value="9860895638">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-card">
+                                        <p>Gender</p>
+                                        <input type="text" value="Male">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="form-card">
+                                        <p>Age</p>
+                                        <input type="number" value="34">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-form" id="institution-form">
+                            <div class="row">
+
+                                <div class="col-md-12">
+                                    <div class="form-card">
+                                        <p>Organization's Name</p>
+                                        <input type="text" value="Creasion Nepal">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-card">
+                                        <p>Organization's Type</p>
+                                        <input type="text" value="Hospital">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-card">
+                                        <p>Organization's Address</p>
+                                        <input type="text" value="Lazimpat, Kathmandu">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-card">
+                                        <p>Contact Person</p>
+                                        <input type="text" value="Yogesh Karki">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-card">
+                                        <p>Contact Number</p>
+                                        <input type="number" value="9860895638">
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="location-info">
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <section class="partners" id="section-partners">
@@ -125,19 +233,32 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" ></script>
 
-<!-- 
-    <script type="module" src="./js/script.js"></script> -->
-    <script src="js/chart.js"></script>
+    <script>
+
+
+            var check = $("#individual").prop("checked");
+			if(check){
+				$("#individual-form").addClass("activeTab");
+			}
+			
+			$("#individual").on("click", function(){
+				check = $(this).prop("checked");
+				$("#institution-form").removeClass("activeTab");
+				$("#individual-form").addClass("activeTab");
+				
+			})
+	
+			$("#institution").on("click", function(){
+				check = $(this).prop("checked");
+				$("#individual-form").removeClass("activeTab");
+				$("#institution-form").addClass("activeTab");
+				console.log(check);
+			})
+
+
+    </script>
 
 </body>
 </html>

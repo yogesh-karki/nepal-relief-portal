@@ -406,4 +406,61 @@ header .request a ion-icon {
   -webkit-filter: saturate(100%);
           filter: saturate(100%);
 }
+
+.section-request {
+  padding: 40px 0;
+}
+
+.section-request .form-head {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-request .info-form {
+  display: none;
+}
+
+.section-request .activeTab {
+  display: block;
+}
+
+.section-request .general-info h5 {
+  font-size: 17px;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+
+.section-request .user-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-request .user-type p {
+  margin-right: 40px;
+  font-family: 'Proxima Nova';
+  font-size: 16px;
+}
+
+.section-request .form-card {
+  margin: 15px 0;
+}
+
+.section-request .form-card p {
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+
+.section-request .form-card input {
+  width: 100%;
+  padding: 10px 0;
+  border: 0;
+  border-bottom: 1px solid #859194;
+}
+
+.section-request .form-card input:focus {
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #43c4e2;
+}
 /*# sourceMappingURL=style.css.map */

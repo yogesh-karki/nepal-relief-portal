@@ -146,7 +146,7 @@ header {
 
             a, button {
                 width: 125px;
-                background: #11b4da;
+                background: $base-color;
                 display: inline-flex;
                 border: 0;
                 color: #fff;
@@ -165,7 +165,7 @@ header {
 
             button {
                 background: transparent;
-                color: #11b4da;
+                color: $base-color;
             }
         }
     }
@@ -366,6 +366,66 @@ header {
                 filter: saturate(100%);
             }
      
+        }
+    }
+}
+
+.section-request {
+    padding: 40px 0;
+
+    .form-head {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .info-form {
+        display: none;
+    }
+
+    .activeTab{
+        display:block;
+    }
+
+    .general-info {
+        h5 {
+            font-size: 17px;
+            text-transform: uppercase;
+            margin-bottom: 35px;
+        }
+    }
+
+    .user-type {
+        display: flex;
+
+        p {
+            margin-right: 40px;
+            font-family: 'Proxima Nova';
+            font-size: 16px;
+        }
+
+    }
+
+
+
+    .form-card {
+        margin: 15px 0;
+
+        p {
+            font-size: 14px;
+            margin-bottom: 0px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 0;    
+            border: 0;
+            border-bottom: 1px solid #859194;
+
+            &:focus {
+                outline: none;
+                border: 0;
+                border-bottom: 1px solid #43c4e2;
+            }
         }
     }
 }

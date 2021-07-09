@@ -32,11 +32,11 @@
 </head>
 <body>
 
-    <header>
+    <header id="header">
         <div class="container">
             <div class="header-wrap">
                 <div class="header-logo">
-                    <a href="">
+                    <a href="index.html">
                         NEPAL RELIEF <span>PORTAL</span>
                     </a>
                 </div>
@@ -237,6 +237,17 @@
 
     <script type="module" src="./js/script.js"></script>
     <script src="js/chart.js"></script>
+
+    <script>
+         $(window).on('scroll', function() {
+                if ($(this).scrollTop() >200){  
+                    $('#header').addClass("fix-head");
+                }
+                else{
+                    $('#header').removeClass("fix-head");
+                }
+            });
+    </script>
 
 </body>
 </html>
