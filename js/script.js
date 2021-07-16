@@ -26,167 +26,34 @@ $(".update").on("click", (e) => {
     var selectedDistrict = $("#districts").val();
 
 
-    var data = {
-        "type": "FeatureCollection",
-        
-        "features": [
-            {
-                "type": "Feature",
-                "properties": {
-                    "id": 1,
-                    "institution_id": "",
-                    "individual_id": "1",
-                    "created_at": "2021-07-03T14:10:14.000000Z",
-                    "updated_at": "2021-07-03T14:10:14.000000Z",
-                    "user_request_id": 14,
-                    "project": { "id": 1, "title": "Covid Saftey", "created_at": "2021-07-01T09:40:52.000000Z", "updated_at": "2021-07-01T09:40:52.000000Z" },
-                    "user_request": { "id": 14, "project_id": 1, "project": { "id": 1, "title": "Oxygen", "created_at": "2021-07-01T09:40:52.000000Z", "updated_at": "2021-07-01T09:40:52.000000Z" } },
-                    "institution": null,
-    
-           
-                    "individual": {
-                        "id": 16,
-                        "name": "Som Bahadur Tamang ",
-                        "gender": "male",
-                        "age": 24,
-                        "province_id": 2,
-                        "district_id": 34,
-                        "local_level_id": 3,
-                        "coordinates": "86.7512222,27.2072924",
-                        "created_at": "2021-07-03T07:20:46.000000Z",
-                        "updated_at": "2021-07-03T07:21:36.000000Z",
-                        "contact_number": "12",
-    
-                        "province": {
-                            "id": 3,
-                            "created_at": "2021-07-02T04:27:55.000000Z",
-                            "updated_at": "2021-07-02T04:27:55.000000Z",
-                            "title": "Bagmati",
-                            "title_en": "Bagmati ",
-                            "title_ne": "\u092a\u094d\u0930\u0926\u0947\u0936 \u0928\u0902 .\u0968",
-                            "code": "p1",
-                            "bbox": "[84.4838899645418,26.4223835197793,87.0145939355117,27.4631790982775]",
-                            "centroid": "{\"type\":\"Point\",\"coordinates\":[85.68968070300077,26.930519228980092]}",
-                            "order": 3
-                        },
-                        "district": {
-                            "id": 27,
-                            "created_at": "2021-07-02T04:33:28.000000Z",
-                            "updated_at": "2021-07-02T04:33:28.000000Z",
-                            "title": "Kathmandu",
-                            "title_en": "Kathmandu",
-                            "title_ne": "\u092e\u0928\u093e\u0919\u094d\u0917",
-                            "code": "Kathmandu",
-                            "centroid": "{\"type\":\"Point\",\"coordinates\":[84.22451544738435,28.672919154212916]}",
-                            "bbox": "[83.7892648291775,28.4450199535588,84.5705552315087,28.9004527054085]",
-                            "province_id": 4,
-                            "order": 27
-                        }
-                    },
-                    "inventories": [
-                        {
-                            "id": 3,
-                            "title": "Oxygen Cylinder",
-                            "quantity": null,
-                            "project_id": 1,
-                            "created_at": "2021-07-02T18:13:11.000000Z",
-                            "updated_at": "2021-07-02T18:13:11.000000Z",
-                            "pivot": { "response_id": 1, "inventory_id": 3, "quantity": 1 }
-                        }
-                    ]
-    
-                },
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [85.3829884,27.7640277, 0.0]
-                }
-            },
-
-            {
-                "type": "Feature",
-                "properties": {
-                    "id": 2,
-                    "institution_id": "",
-                    "individual_id": "1",
-                    "created_at": "2021-07-03T14:10:14.000000Z",
-                    "updated_at": "2021-07-03T14:10:14.000000Z",
-                    "user_request_id": 14,
-                    "project": { "id": 1, "title": "Covid Saftey", "created_at": "2021-07-01T09:40:52.000000Z", "updated_at": "2021-07-01T09:40:52.000000Z" },
-                    "user_request": { "id": 14, "project_id": 1, "project": { "id": 1, "title": "Oxygen", "created_at": "2021-07-01T09:40:52.000000Z", "updated_at": "2021-07-01T09:40:52.000000Z" } },
-                    "institution": null,
-    
-           
-                    "individual": {
-                        "id": 16,
-                        "name": "Tom Tamang ",
-                        "gender": "male",
-                        "age": 24,
-                        "province_id": 2,
-                        "district_id": 34,
-                        "local_level_id": 3,
-                        "coordinates": "86.7512222,27.2072924",
-                        "created_at": "2021-07-03T07:20:46.000000Z",
-                        "updated_at": "2021-07-03T07:21:36.000000Z",
-                        "contact_number": "12",
-    
-                        "province": {
-                            "id": 3,
-                            "created_at": "2021-07-02T04:27:55.000000Z",
-                            "updated_at": "2021-07-02T04:27:55.000000Z",
-                            "title": "Bagmati",
-                            "title_en": "Bagmati ",
-                            "title_ne": "\u092a\u094d\u0930\u0926\u0947\u0936 \u0928\u0902 .\u0968",
-                            "code": "p1",
-                            "bbox": "[84.4838899645418,26.4223835197793,87.0145939355117,27.4631790982775]",
-                            "centroid": "{\"type\":\"Point\",\"coordinates\":[85.68968070300077,26.930519228980092]}",
-                            "order": 3
-                        },
-                        "district": {
-                            "id": 27,
-                            "created_at": "2021-07-02T04:33:28.000000Z",
-                            "updated_at": "2021-07-02T04:33:28.000000Z",
-                            "title": "Kathmandu",
-                            "title_en": "Kathmandu",
-                            "title_ne": "\u092e\u0928\u093e\u0919\u094d\u0917",
-                            "code": "Kathmandu",
-                            "centroid": "{\"type\":\"Point\",\"coordinates\":[84.22451544738435,28.672919154212916]}",
-                            "bbox": "[83.7892648291775,28.4450199535588,84.5705552315087,28.9004527054085]",
-                            "province_id": 4,
-                            "order": 27
-                        }
-                    },
-                    "inventories": [
-                        {
-                            "id": 3,
-                            "title": "Oxygen Cylinder",
-                            "quantity": null,
-                            "project_id": 1,
-                            "created_at": "2021-07-02T18:13:11.000000Z",
-                            "updated_at": "2021-07-02T18:13:11.000000Z",
-                            "pivot": { "response_id": 1, "inventory_id": 3, "quantity": 1 }
-                        }
-                    ]
-    
-                },
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [86.3829884,27.7640277, 0.0]
-                }
-            }
-    
-    
-        ]
-    };
 
     map.getSource('cylinders').setData(data);
 
     // Map Fly to the Province
     if (selectedProvince == 3) {
-        map.flyTo({
-            center: [85.2588, 27.7346],
-            zoom: 8.5,
-            essential: true,
-        });
+        // map.flyTo({
+        //     center: [85.2588, 27.7346],
+        //     zoom: 8.5,
+        //     essential: true,
+        // });
+
+        console.log("hello")
+
+        // map.addSource("province3", {
+        //     type: "geojson",
+        //     data: "../json/coordinates/Province-1.geo",
+        // });
+    
+        // map.addLayer({
+        //     id: "province3-fill",
+        //     type: "line",
+        //     source: "province3",
+        //     layout: {},
+        //     paint: {
+        //         "line-color": "#333",
+        //     },
+        // });
+
     } else if (selectedProvince == 1) {
         map.flyTo({
             center: [86.3193, 27.213],
@@ -395,6 +262,7 @@ var map = new mapboxgl.Map({
                 });
             });
         });
+
     
         map.on("click", "unclustered-point", function (e) {
             var coordinates = e.features[0].geometry.coordinates.slice();
